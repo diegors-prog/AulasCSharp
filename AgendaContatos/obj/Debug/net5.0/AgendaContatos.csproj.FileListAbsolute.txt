@@ -1,0 +1,15 @@
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/AgendaContatos.deps.json
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/AgendaContatos.runtimeconfig.json
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/AgendaContatos.runtimeconfig.dev.json
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/AgendaContatos.dll
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/ref/AgendaContatos.dll
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/bin/Debug/net5.0/AgendaContatos.pdb
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.csproj.AssemblyReference.cache
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.AssemblyInfoInputs.cache
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.AssemblyInfo.cs
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.csproj.CoreCompileInputs.cache
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.dll
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/ref/AgendaContatos.dll
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.pdb
+/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/Debug/net5.0/AgendaContatos.genruntimeconfig.cache
