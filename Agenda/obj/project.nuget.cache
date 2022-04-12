@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r/7M9h836qQudP7ilwcOK0vqT44IEADm6uzCUD3VXfT7AzTXZ9j7Sa53gMnSSbgaTbGDvO8T80pHkCHNQdoBpQ==",
+  "dgSpecHash": "jCVPq28P4jf6HBvy6/DufY1vRLZIA+C39+RHxkKoPHlwevpFJRz71N88D/K5mbawYXqmHi1uq+dQI5jIjDFF4w==",
   "success": true,
-  "projectFilePath": "/Users/arthurrocha/Developer/Aulas-c#/Agenda/Agenda.csproj",
+  "projectFilePath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/Agenda/Agenda.csproj",
   "expectedPackageFiles": [
     "/Users/arthurrocha/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/arthurrocha/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

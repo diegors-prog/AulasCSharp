@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Agenda.Domain;
 using Agenda.Domain.Interfaces;
 using Agenda.ViewModels;
@@ -10,17 +9,17 @@ namespace Agenda.Controllers
     [Route("[controller]")]
     public class ContatoController : ControllerBase
     {
-        private readonly IContatoRepository _ContatosRepository;
-        public ContatoController(IContatoRepository contatosRepository)
+        private readonly IContatoService _ContatosService;
+        public ContatoController(IContatoService contatosService)
         {
-            this._ContatosRepository = contatosRepository;
+            this._ContatosService = contatosService;
         }
 
         [HttpGet]
         [Route("contato")]
         public IActionResult GetList()
         {
-            var listaContatos = _ContatosRepository.GetAll();
+            var listaContatos = _ContatosService.BuscarContatos();
             if(listaContatos.Count == 0) return NotFound();
             return Ok(listaContatos);
         }
@@ -29,7 +28,7 @@ namespace Agenda.Controllers
         [Route("contato/{id}")]
         public IActionResult Get(int id)
         {
-            var contato = _ContatosRepository.GetById(id);
+            var contato = _ContatosService.BuscarContato(id);
             if(contato == null) return NotFound();
             return Ok(contato);
         }
@@ -40,10 +39,10 @@ namespace Agenda.Controllers
         {
             if(!ModelState.IsValid) return BadRequest();
 
-            _ContatosRepository.Save(model);
+            var retorno = _ContatosService.CriarContato(model);
             return Ok(new
             {
-                message = "Contato " + model.Nome + " foi adicionado com sucesso!"
+                message = retorno
             });
         }
 
@@ -51,31 +50,39 @@ namespace Agenda.Controllers
         [Route("contato/{id}")]
         public IActionResult Delete(int id)
         {
-            var contato = _ContatosRepository.GetById(id);
-            if(contato == null) return NotFound();
-
-            _ContatosRepository.Delete(contato);
-            return Ok(new
+            var retorno = _ContatosService.DeletarContato(id);
+            
+            if (retorno == false)
             {
-                message = "Cliente deletado com sucesso!"
-            });
+                return NotFound();
+            }
+            else
+            {
+                return Ok(new
+                {
+                    message = "Contato deletado com sucesso!"
+                });
+            }
         }
 
         [HttpPut]
         [Route("contato/{id}")]
         public IActionResult Put(int id, [FromBody] ContatoUpdateViewModel model)
         {
-            var contato = _ContatosRepository.GetById(id);
-            if(contato == null) return NotFound();
-
-            contato.Nome = model.Nome;
-            contato.Telefone = model.Telefone;
-
-            _ContatosRepository.Update(contato);
-            return Ok(new
+            var retorno = _ContatosService.EditarContato(id, model);
+            if(retorno == false)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(new
             {
                 message = "Contato com id " + id + " atualizado com sucesso!"
             });
+            }
+
+            
         }
     }
 }

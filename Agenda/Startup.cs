@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Agenda.Data;
 using Agenda.Data.Repositories;
 using Agenda.Domain.Interfaces;
+using Agenda.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,7 @@ namespace Agenda
         {
             services.AddDbContext<DataContext>(x => x.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IContatoRepository, ContatoRepository>();
+            services.AddScoped<IContatoService, ContatoService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

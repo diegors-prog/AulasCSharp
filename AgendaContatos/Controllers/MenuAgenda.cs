@@ -5,7 +5,17 @@ namespace AgendaContatos.Controllers
 {
     public class MenuAgenda
     {
-        ControleAgenda controle = new ControleAgenda();
+        private ControleAgenda controle;
+
+        public MenuAgenda(ControleAgenda controleAgenda)
+        {
+            this.controle = controleAgenda;
+        }
+
+        public MenuAgenda()
+        {
+
+        }
 
         public void Menu()
         {
@@ -16,9 +26,7 @@ namespace AgendaContatos.Controllers
                 Console.WriteLine("Digite 1 para add um novo contato");
                 Console.WriteLine("Digite 2 para editar um contato");
                 Console.WriteLine("Digite 3 para listar todos contatos");
-                Console.WriteLine("Digite 4 para listar somente os contatos ativos");
-                Console.WriteLine("Digite 5 para desativar um contato");
-                Console.WriteLine("Digite 6 para remover um contato");
+                Console.WriteLine("Digite 4 para remover um contato");
                 Console.WriteLine("Digite 0 para sair da aplicação");
 
                 operador = Console.ReadLine();
@@ -74,38 +82,6 @@ namespace AgendaContatos.Controllers
                     break;
 
                     case "4":
-                        var retorno4 = controle.ListarContatosAtivos();
-                        Console.WriteLine(retorno4);
-                    break;
-
-                    case "5":
-                        Console.WriteLine("Escolha o id do usuário a ser desativado");
-                        var contatosAtivos = controle.ListarContatosAtivos();
-                        if (contatosAtivos.Contains("vazia"))
-                        {
-                            Console.WriteLine(contatosAtivos);
-                            Menu();
-                        }
-                        else
-                        {
-                            Console.WriteLine(contatosAtivos);
-                        }
-
-                        int idContatoDesativar = int.Parse(Console.ReadLine());
-
-                        var retorno5 = controle.DesativarContato(idContatoDesativar);
-
-                        if (retorno5)
-                        {
-                            Console.WriteLine("Contato desativado com sucesso");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Não existe um contato com o código " + idContatoDesativar);
-                        }
-                    break;
-
-                    case "6":
                         Console.WriteLine("Escolha o id do usuário a ser removido");
                         var todosContatos = controle.ListarContatos();
                         if (todosContatos.Contains("vazia"))

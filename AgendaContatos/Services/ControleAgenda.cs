@@ -7,8 +7,12 @@ namespace AgendaContatos.Services
 {
     public class ControleAgenda
     {
-        AgendaDeContatos minhaAgenda = new AgendaDeContatos();
+        private AgendaDeContatos minhaAgenda;
 
+        public ControleAgenda(AgendaDeContatos agenda)
+        {
+            this.minhaAgenda = agenda;
+        }
 
         public int TamanhoLista()
         {
@@ -38,7 +42,7 @@ namespace AgendaContatos.Services
 
             foreach (var item in contatos)
             {
-                builder.AppendLine("Id: " + item.Id + " - " + item.Nome + " Número: " + item.Telefone + " Ativado: " + item.ContatoAtivo);
+                builder.AppendLine("Id: " + item.Id + " - " + item.Nome + " Número: " + item.Telefone);
             }
 
             return builder.ToString();
@@ -89,46 +93,6 @@ namespace AgendaContatos.Services
 
             retorno = "Contato excluído com sucesso!";
             return retorno;
-        }
-
-        public bool DesativarContato(int idContato)
-        {
-            if (TamanhoLista().Equals(0))
-            {
-                return false;
-            }
-
-            var contato = minhaAgenda.GetById(idContato);
-
-            if (contato == null)
-            {
-                return false;
-            }
-
-            minhaAgenda.Disable(contato);
-            return true;
-        }
-
-        public string ListarContatosAtivos()
-        {
-            var builder = new StringBuilder();
-            var contatos = minhaAgenda.GetAll();
-            var qtdContatos = contatos.Count;
-
-            if (qtdContatos == 0)
-            {
-                builder.AppendLine("Lista vazia, para poder editar é necessário possuir contatos cadastrados!");
-                return builder.ToString();
-            }
-
-            var contatosAtivos = contatos.FindAll(p => p.ContatoAtivo == true);
-
-            foreach (var item in contatosAtivos)
-            {
-                builder.AppendLine(item.Id + " - " + item.Nome + " : " + item.Telefone);
-            }
-
-            return builder.ToString();
         }
     }
 }

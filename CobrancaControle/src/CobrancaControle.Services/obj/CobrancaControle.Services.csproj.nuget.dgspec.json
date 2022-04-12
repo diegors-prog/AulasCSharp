@@ -1,0 +1,314 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Services/CobrancaControle.Services.csproj": {}
+  },
+  "projects": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/CobrancaControle.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/CobrancaControle.Data.csproj",
+        "projectName": "CobrancaControle.Data",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/CobrancaControle.Data.csproj",
+        "packagesPath": "/Users/arthurrocha/.nuget/packages/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj",
+        "projectName": "CobrancaControle.Domain",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj",
+        "packagesPath": "/Users/arthurrocha/.nuget/packages/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Services/CobrancaControle.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Services/CobrancaControle.Services.csproj",
+        "projectName": "CobrancaControle.Services",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Services/CobrancaControle.Services.csproj",
+        "packagesPath": "/Users/arthurrocha/.nuget/packages/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/CobrancaControle.Data.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Data/CobrancaControle.Data.csproj"
+              },
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/CobrancaControle.Domain/CobrancaControle.Domain.csproj"
+              },
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj",
+        "projectName": "Core",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/Core.csproj",
+        "packagesPath": "/Users/arthurrocha/.nuget/packages/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/CobrancaControle/src/Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

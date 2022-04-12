@@ -1003,11 +1003,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/Agenda/Agenda.csproj",
+      "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/Agenda/Agenda.csproj",
       "projectName": "Agenda",
-      "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/Agenda/Agenda.csproj",
+      "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/Agenda/Agenda.csproj",
       "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-      "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/Agenda/obj/",
+      "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/Agenda/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"

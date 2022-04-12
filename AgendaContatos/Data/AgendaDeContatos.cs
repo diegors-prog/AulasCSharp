@@ -1,45 +1,47 @@
 using System.Collections.Generic;
+using System.Linq;
 using AgendaContatos.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgendaContatos.Data
 {
     public class AgendaDeContatos
     {
-        private List<Contato> listaDeContatos = new List<Contato>();
+        private DataContext Context;
+
+        public AgendaDeContatos()
+        {
+
+        }
+        public AgendaDeContatos(DataContext context)
+        {
+            this.Context = context;
+        }
 
         public List<Contato> GetAll()
         {
-            return listaDeContatos;
+            return Context.contatos.ToList();
         }
 
         public void Save(Contato contato)
         {
-            listaDeContatos.Add(contato);
+            Context.Add(contato);
+            Context.SaveChanges();
         }
 
         public Contato GetById(int idContato)
         {
-            return listaDeContatos.Find(p => p.Id == idContato);
+            return Context.contatos.SingleOrDefault(i => i.Id == idContato);
         }
 
         public void Update(Contato contato)
         {
-            var contatoEditado = listaDeContatos.Find(p => p.Id == contato.Id);
-
-            contatoEditado.Nome = contato.Nome;
-            contatoEditado.Telefone = contato.Telefone;
+            Context.Entry(contato).State = EntityState.Modified;
         }
 
         public void Delete(Contato contato)
         {
-            listaDeContatos.Remove(contato);
-        }
-
-        public void Disable(Contato contato)
-        {
-            var contatoDesativado = listaDeContatos.Find(p => p.Id == contato.Id);
-
-            contatoDesativado.ContatoAtivo = false;
+            Context.contatos.Remove(contato);
         }
     }
 }

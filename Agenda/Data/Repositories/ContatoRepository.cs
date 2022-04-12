@@ -18,6 +18,7 @@ namespace Agenda.Data.Repositories
         public void Delete(Contato contato)
         {
             Context.DbSetContato.Remove(contato);
+            Context.SaveChanges();
         }
 
         public List<Contato> GetAll()

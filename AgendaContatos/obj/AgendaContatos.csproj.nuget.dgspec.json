@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/AgendaContatos.csproj": {}
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/AgendaContatos/AgendaContatos.csproj": {}
   },
   "projects": {
-    "/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/AgendaContatos.csproj": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/AgendaContatos/AgendaContatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/AgendaContatos.csproj",
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/AgendaContatos/AgendaContatos.csproj",
         "projectName": "AgendaContatos",
-        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/AgendaContatos.csproj",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/AgendaContatos/AgendaContatos.csproj",
         "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AgendaContatos/obj/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/AgendaContatos/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,18 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
