@@ -1,18 +1,23 @@
 using System;
-using ConsoleControleCobranca.Services;
+using ConsoleControleCobranca.Interfaces;
 
 namespace ConsoleControleCobranca.Controllers
 {
     public class ChargeClientController
     {
-        ChargeService chargeService = new ChargeService();
-        ClientService clientService = new ClientService();
+        private IChargeService _chargeService;
+        private IClientService _clientService;
+
+        public ChargeClientController(
+            IChargeService chargeService,
+            IClientService clientService)
+        {
+            this._chargeService = chargeService;
+            this._clientService = clientService;
+        }
 
         public void Menu()
         {
-            chargeService.ClientService = clientService;
-            clientService.ChargeService = chargeService;
-
             string operador = string.Empty;
 
             while (operador != "0")
@@ -40,22 +45,23 @@ namespace ConsoleControleCobranca.Controllers
                         Console.WriteLine("Digite o telefone do cliente");
                         string phoneNumber = Console.ReadLine().Trim();
 
-                        var retorno = clientService.AddClient(clientName, phoneNumber);
+                        var retorno = _clientService.AddClient(clientName, phoneNumber);
                         Console.WriteLine(retorno);
                         Console.WriteLine("");
                     break;
                         case "2":
                         Console.WriteLine("Escolha o id do cliente a ser editado");
-                        var retorno1 = clientService.ShowClients();
+                        var retorno1 = _clientService.ShowClients();
                         if (retorno1.Contains("vazia"))
                         {
-                            Console.WriteLine(retorno1);
+                            Console.WriteLine(retorno1 + ", adicione o primeiro cliente!");
+                            Console.WriteLine("");
                             Menu();
                         }
                         else
                             Console.WriteLine(retorno1);
 
-                        string clientId = Console.ReadLine();
+                        string clientId = Console.ReadLine().Trim();
                         int clientIdInt = Convert.ToInt32(clientId);
 
                         Console.WriteLine("Digite o novo nome");
@@ -64,30 +70,58 @@ namespace ConsoleControleCobranca.Controllers
                         Console.WriteLine("Digite o novo telefone");
                         string newPhoneNumber = Console.ReadLine().Trim();
 
-                        var retorno2 = clientService.EditClient(clientIdInt, newName, newPhoneNumber);
+                        var retorno2 = _clientService.EditClient(clientIdInt, newName, newPhoneNumber);
                         Console.WriteLine(retorno2);
                         Console.WriteLine("");
                     break;
                     case "3":
-                        var retorno3 = clientService.ShowClients();
+                        var retorno3 = _clientService.ShowClients();
                         Console.WriteLine(retorno3);
                         Console.WriteLine("");
                     break;
                     case "4":
                         Console.WriteLine("Escolha o Id do cliente a ser removido");
 
-                        var showClients = clientService.ShowClients();
-                        Console.WriteLine(showClients);
-                        Console.WriteLine("");
+                        var showClients = _clientService.ShowClients();
 
-                        var idClient = Console.ReadLine();
+                        if (showClients.Contains("vazia"))
+                        {
+                            Console.WriteLine(showClients);
+                            Console.WriteLine("");
+                            Menu();
+                        }
+                        else
+                        {
+                            Console.WriteLine(showClients);
+                            Console.WriteLine("");
+                        }
+
+                        var idClient = Console.ReadLine().Trim();
                         var idClientInt = Convert.ToInt32(idClient);
 
-                        var retorno4 = clientService.RemoveClient(idClientInt);
+                        var retorno4 = _clientService.RemoveClient(idClientInt);
                         Console.WriteLine(retorno4);
                         Console.WriteLine("");
                     break;
                     case "5":
+                        Console.WriteLine("Escolha o Id do cliente");
+                        var showClients2 = _clientService.ShowClients();
+
+                        if (showClients2.Contains("vazia"))
+                        {
+                            Console.WriteLine("É preciso ter clientes na base de dados para adicionar uma nova cobranca!");
+                            Console.WriteLine("");
+                            Menu();
+                        }
+                        else
+                        {
+                            Console.WriteLine(showClients2);
+                            Console.WriteLine("");
+                        }
+
+                        var idClient2 = Console.ReadLine().Trim();
+                        var idClientInt2 = Convert.ToInt32(idClient2);
+
                         Console.WriteLine("Digite a data de vencimento");
                         string date = Console.ReadLine().Trim();
 
@@ -98,32 +132,35 @@ namespace ConsoleControleCobranca.Controllers
 
                         double amountCharge = Convert.ToDouble(amount);
 
-                        Console.WriteLine("Escolha o Id do cliente");
-                        var showClients2 = clientService.ShowClients();
-                        Console.WriteLine(showClients2);
-                        Console.WriteLine("");
-
-                        var idClient2 = Console.ReadLine().Trim();
-                        var idClientInt2 = Convert.ToInt32(idClient2);
-
-                        var retorno5 = chargeService.AddCharge(dueDate, amountCharge, idClientInt2);
+                        var retorno5 = _chargeService.AddCharge(dueDate, amountCharge, idClientInt2);
                         Console.WriteLine(retorno5);
                     break;
                     case "6":
-                        var showCharges = chargeService.ShowCharges();
+                        var showCharges = _chargeService.ShowCharges();
                         Console.WriteLine(showCharges);
+                        Console.WriteLine("");
                     break;
                     case "7":
                         Console.WriteLine("Escolha o Id da cobrança a ser paga");
 
-                        var showCharges2 = chargeService.ShowCharges();
-                        Console.WriteLine(showCharges2);
-                        Console.WriteLine("");
+                        var showCharges2 = _chargeService.ShowCharges();
 
-                        var chargeId = Console.ReadLine();
+                        if (showCharges2.Contains("vazia"))
+                        {
+                            Console.WriteLine("Não existem cobranças na base de dados");
+                            Console.WriteLine("");
+                            Menu();
+                        }
+                        else
+                        {
+                            Console.WriteLine(showCharges2);
+                            Console.WriteLine("");
+                        }
+
+                        var chargeId = Console.ReadLine().Trim();
                         var chargeIdInt = Convert.ToInt32(chargeId);
 
-                        var retorno7 = chargeService.PayCharge(chargeIdInt);
+                        var retorno7 = _chargeService.PayCharge(chargeIdInt);
                         Console.WriteLine(retorno7);
                         Console.WriteLine("");
                     break;

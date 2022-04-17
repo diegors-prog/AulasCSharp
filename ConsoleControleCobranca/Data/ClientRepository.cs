@@ -6,11 +6,10 @@ namespace ConsoleControleCobranca.Data
 {
     public class ClientRepository : IClientRepository
     {
-        List<Client> clientList = new List<Client>();
+        private List<Client> clientList = new List<Client>();
 
         public void Save(Client client)
         {
-
             clientList.Add(client);
         }
 

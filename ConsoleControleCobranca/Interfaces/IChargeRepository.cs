@@ -11,5 +11,6 @@ namespace ConsoleControleCobranca.Interfaces
          void Update(Charge charge);
          void Delete(int chargeId);
          List<Charge> GetAllClientCharges(int clientId);
+         int ListSize();
     }
 }

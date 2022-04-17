@@ -42,5 +42,10 @@ namespace ConsoleControleCobranca.Data
             var clientCharges = billingList.FindAll(i => i.Client.Id == clientId);
             return clientCharges;
         }
+
+        public int ListSize()
+        {
+            return billingList.Count;
+        }
     }
 }

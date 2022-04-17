@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using System.Text;
 using System;
-using ConsoleControleCobranca.Data;
 using ConsoleControleCobranca.Domain;
 using ConsoleControleCobranca.Interfaces;
 
 /* Regras de negócio implementadas:
     Para poder adicionar uma nova cobrança é obrigado ter clientes adicionados na base de dados;
     Se a cobrança a ser paga estiver vencida, será acrecentado 10% em cima do valor da cobrança;
-    Uma cobrança não pode ser excluída da base de dados, se verificarem o repositório
+    As cobranças não podem ser excluídas da base de dados, se verificarem no repositório
     de cobranças existe uma função de Delete, mas como não foi implementado uma rotina
     no ChargeService para a exclusão, esta ação está proíbida.
 */
@@ -17,22 +16,24 @@ namespace ConsoleControleCobranca.Services
 {
     public class ChargeService : IChargeService
     {
-        ChargeRepository chargeRepository = new ChargeRepository();
+        private IChargeRepository _chargeRepository; 
         private IClientService _clientService;
         public IClientService ClientService { get => _clientService; set => _clientService = value; }
 
-        public ChargeService()
-        {}
+        public ChargeService(IChargeRepository chargeRepository)
+        {
+            this._chargeRepository = chargeRepository;
+        }
 
         public string AddCharge(DateTime dueDate, double amountCharge, int clientid)
         {
-            int chargeId = chargeRepository.GetAll().Count + 1;
+            int chargeId = _chargeRepository.GetAll().Count + 1;
             var client = _clientService.SearchClient(clientid);
             if(client == null)
                 return "Cliente não encontrado!";
             else
             {
-                chargeRepository.Save(new Charge(chargeId, DateTime.Now, dueDate, amountCharge, client));
+                _chargeRepository.Save(new Charge(chargeId, DateTime.Now, dueDate, amountCharge, client));
                 return "Cobranca adicionada com sucesso!";
             }
         }
@@ -40,7 +41,7 @@ namespace ConsoleControleCobranca.Services
         public string ShowCharges()
         {
             var builder = new StringBuilder();
-            var chargeList = chargeRepository.GetAll();
+            var chargeList = _chargeRepository.GetAll();
             var numberOfCharges = chargeList.Count;
 
             if (numberOfCharges == 0)
@@ -58,7 +59,7 @@ namespace ConsoleControleCobranca.Services
 
         public string PayCharge(int chargeId)
         {
-            var charge = chargeRepository.GetById(chargeId);
+            var charge = _chargeRepository.GetById(chargeId);
 
             if (charge == null)
                 return "Cobrança não encontrada!";
@@ -73,12 +74,12 @@ namespace ConsoleControleCobranca.Services
                 double readjustedAmount = charge.AmountCharge * 1.1;
                 charge.AmountCharge = readjustedAmount;
 
-                chargeRepository.Update(charge);
+                _chargeRepository.Update(charge);
                 return "Pagamento efetuado com sucesso na data " + charge.PaymentDate.ToString() + ", com o valor de R$ " + charge.AmountCharge.ToString("0.00");
             }
             else
             {
-                chargeRepository.Update(charge);
+                _chargeRepository.Update(charge);
                 return "Pagamento efetuado com sucesso na data " + charge.PaymentDate.ToString() + ", com o valor de R$ " + charge.AmountCharge.ToString("0.00");
             }
         }
@@ -87,7 +88,7 @@ namespace ConsoleControleCobranca.Services
         // cliente a ser removido da base de dados
         public bool CheckUnpaidClientFess(int clientId)
         {
-            var clientBillingList = chargeRepository.GetAllClientCharges(clientId);
+            var clientBillingList = _chargeRepository.GetAllClientCharges(clientId);
             List<Charge> unpaidBillsList = new List<Charge>();
 
             if(clientBillingList.Count == 0)
