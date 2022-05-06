@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Domain\" />
+    <None Remove="Data\" />
+    <None Remove="Services\" />
+    <None Remove="Data\Context\" />
+    <None Remove="Data\Repositories\" />
+    <None Remove="Data\Mapping\" />
+    <None Remove="Domain\Interfaces\" />
+    <None Remove="Domain\Entities\" />
+    <None Remove="Domain\Interfaces\RepositoryInterfaces\" />
+    <None Remove="Domain\Interfaces\ServiceInterfaces\" />
+    <None Remove="Domain\Enums\" />
+    <None Remove="Controllers\ViewModels\" />
+    <None Remove="Extensions\" />
+    <None Remove="Services\TokenService\" />
+    <None Remove="Attributes\" />
+    <None Remove="Services\EmailService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="Data\Mappings\" />
+    <Folder Include="Domain\Interfaces\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Interfaces\RepositoryInterfaces\" />
+    <Folder Include="Domain\Interfaces\ServiceInterfaces\" />
+    <Folder Include="Domain\Enums\" />
+    <Folder Include="Controllers\ViewModels\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Services\TokenService\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Services\EmailService\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />
+    <PackageReference Include="SecureIdentity" Version="1.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\Image\" />
+  </ItemGroup>
+</Project>
