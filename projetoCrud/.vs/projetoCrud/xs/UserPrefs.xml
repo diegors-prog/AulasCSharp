@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{C20B3E7F-D74D-4B0E-943C-9312238E6F3D}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AlunoController.cs">
+    <Files>
+      <File FileName="Models/Domains/Aluno.cs" Line="7" Column="35" />
+      <File FileName="Models/Repositories/IAlunoRepository.cs" Line="15" Column="2" />
+      <File FileName="Models/Repositories/IUnitOfWork.cs" Line="8" Column="1" />
+      <File FileName="Models/Repositories/DataContext.cs" Line="13" Column="27" />
+      <File FileName="Types/AlunoMap.cs" Line="17" Column="1" />
+      <File FileName="Models/Repositories/AlunoRepository.cs" Line="38" Column="17" />
+      <File FileName="Models/Repositories/UnitOfWork.cs" Line="27" Column="6" />
+      <File FileName="Program.cs" Line="15" Column="80" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="Controllers/AlunoController.cs" Line="130" Column="1" />
+      <File FileName="DTOs/AlunoDTO.cs" Line="14" Column="1" />
+      <File FileName="ViewModels/AlunoCreateViewModel.cs" Line="10" Column="42" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="projetoCrud" expanded="True">
+            <Node name="projetoCrud" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AlunoController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.projetoCrud PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
