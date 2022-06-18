@@ -7,44 +7,52 @@ namespace Data.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly DataContext Context;
+        private readonly DataContext _context;
         public UserRepository(DataContext context)
         {
-            this.Context = context;
+            this._context = context;
         }
         
         public bool Delete(int entityId)
         {
-            var user = Context.DbSetUser.FirstOrDefault(x => x.Id == entityId);
+            var user = _context.DbSetUser.FirstOrDefault(x => x.Id == entityId);
 
             if(user == null)
                 return false;
             else
             {
-                Context.DbSetUser.Remove(user);
+                _context.DbSetUser.Remove(user);
                 return true;
             }
         }
 
         public async Task<IList<User>> GetAllAsync()
         {
-            return await Context.DbSetUser.ToListAsync();
+            return await _context.DbSetUser.ToListAsync();
         }
 
         public async Task<User> GetByIdAsync(int entityId)
         {
-            return await Context.DbSetUser
+            return await _context.DbSetUser
                 .FirstOrDefaultAsync(x => x.Id == entityId);
         }
 
         public void Save(User entity)
         {
-            Context.DbSetUser.Add(entity);
+            _context.DbSetUser.Add(entity);
         }
 
         public void Update(User entity)
         {
-            Context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public async Task<User> GetByEmailAsync(string email)
+        {
+            return await _context.DbSetUser
+                .AsNoTracking()
+                .Include(i => i.Roles)
+                .FirstOrDefaultAsync(i => i.Email == email);
         }
     }
 }

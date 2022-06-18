@@ -5,5 +5,6 @@ namespace Domain.Interfaces
          Task CommitAsync();
 
          IUserRepository UserRepository {get;}
+         IRoleRepository RoleRepository {get;}
     }
 }

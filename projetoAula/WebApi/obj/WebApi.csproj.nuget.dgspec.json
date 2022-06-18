@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arthurrocha/Desktop/projetoAula/WebApi/WebApi.csproj": {}
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/WebApi/WebApi.csproj": {}
   },
   "projects": {
-    "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj",
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj",
         "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-        "outputPath": "/Users/arthurrocha/Desktop/projetoAula/Data/obj/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj": {
-                "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj"
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj",
         "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-        "outputPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/obj/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
@@ -126,14 +126,14 @@
         }
       }
     },
-    "/Users/arthurrocha/Desktop/projetoAula/WebApi/WebApi.csproj": {
+    "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/WebApi/WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arthurrocha/Desktop/projetoAula/WebApi/WebApi.csproj",
+        "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/WebApi/WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "/Users/arthurrocha/Desktop/projetoAula/WebApi/WebApi.csproj",
+        "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/WebApi/WebApi.csproj",
         "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-        "outputPath": "/Users/arthurrocha/Desktop/projetoAula/WebApi/obj/",
+        "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/WebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
@@ -148,11 +148,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj": {
-                "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj"
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj"
               },
-              "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj": {
-                "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj"
+              "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj": {
+                "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj"
               }
             }
           }
@@ -167,6 +167,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -184,6 +196,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "SecureIdentity": {
+              "target": "Package",
+              "version": "[1.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

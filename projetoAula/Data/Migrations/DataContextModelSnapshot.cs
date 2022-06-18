@@ -16,6 +16,30 @@ namespace Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
 
+            modelBuilder.Entity("Domain.Entities.Role", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("NVARCHAR")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("NVARCHAR")
+                        .HasColumnName("slug");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("role", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -23,11 +47,19 @@ namespace Data.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("id");
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("bio");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(80)
                         .HasColumnType("VARCHAR")
                         .HasColumnName("email");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("image");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -35,15 +67,56 @@ namespace Data.Migrations
                         .HasColumnType("VARCHAR")
                         .HasColumnName("password");
 
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("VARCHAR")
+                        .HasColumnName("slug");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(80)
                         .HasColumnType("NVARCHAR")
-                        .HasColumnName("name");
+                        .HasColumnName("username");
 
                     b.HasKey("Id");
 
+                    b.HasIndex(new[] { "Slug" }, "IX_user_slug")
+                        .IsUnique();
+
                     b.ToTable("user", (string)null);
+                });
+
+            modelBuilder.Entity("user_role", b =>
+                {
+                    b.Property<long>("role_id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("user_id")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("role_id", "user_id");
+
+                    b.HasIndex("user_id");
+
+                    b.ToTable("user_role");
+                });
+
+            modelBuilder.Entity("user_role", b =>
+                {
+                    b.HasOne("Domain.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("role_id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("FK_user_role_role_id");
+
+                    b.HasOne("Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_user_role_user_id");
                 });
 #pragma warning restore 612, 618
         }

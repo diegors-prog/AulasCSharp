@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UwExzFhKpF9MF9f3zD5c07B0oY4Dprs4bgHre+hpcz/Q6Lb6r6Q1YKgMLzJKhtjOnugs0T7SAJxixVLrMa/DYg==",
+  "dgSpecHash": "j5PHmUaPyjhamWQ1Q7BF2MMnvlU/RIk9uAs6ZuqBaPt8mETJoAaBSab3YAZUQq7Wz68ehaXVjOppjScsDJdS4w==",
   "success": true,
-  "projectFilePath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj",
+  "projectFilePath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

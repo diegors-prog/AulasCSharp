@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QqF3C4XsbCrSfNIi/IQrqbKzNwyBxBmtSRLJnNZ28CF7xzo5A6orGQhYUrMc/VdQOL1/hcYPs3wv/FfPdyg62w==",
+  "dgSpecHash": "iTYI9FUgFQWvErd/BrMhANl53/O6Y3h7g3zxk52iOC+ZHjTPe8WkpgWaJdQBJHP3S8ZICpJujsejP1pa7gu5ZQ==",
   "success": true,
-  "projectFilePath": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj",
+  "projectFilePath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj",
   "expectedPackageFiles": [
     "/Users/arthurrocha/.nuget/packages/microsoft.data.sqlite.core/6.0.3/microsoft.data.sqlite.core.6.0.3.nupkg.sha512",
     "/Users/arthurrocha/.nuget/packages/microsoft.entityframeworkcore/6.0.3/microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

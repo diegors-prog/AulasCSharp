@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj",
+      "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj",
       "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-      "outputPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/obj/",
+      "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"

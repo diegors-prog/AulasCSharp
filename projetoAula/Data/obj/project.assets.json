@@ -1159,11 +1159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj",
+      "projectUniqueName": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj",
       "projectName": "Data",
-      "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Data/Data.csproj",
+      "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/Data.csproj",
       "packagesPath": "/Users/arthurrocha/.nuget/packages/",
-      "outputPath": "/Users/arthurrocha/Desktop/projetoAula/Data/obj/",
+      "outputPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/arthurrocha/.nuget/NuGet/NuGet.Config"
@@ -1178,8 +1178,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj": {
-              "projectPath": "/Users/arthurrocha/Desktop/projetoAula/Domain/Domain.csproj"
+            "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj": {
+              "projectPath": "/Users/arthurrocha/Developer/Aulas-c#/AulasCSharp/projetoAula/Domain/Domain.csproj"
             }
           }
         }
