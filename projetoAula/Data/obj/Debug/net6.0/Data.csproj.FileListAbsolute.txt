@@ -1,0 +1,15 @@
+/Users/arthurrocha/Desktop/projetoAula/Data/bin/Debug/net6.0/Data.deps.json
+/Users/arthurrocha/Desktop/projetoAula/Data/bin/Debug/net6.0/Data.dll
+/Users/arthurrocha/Desktop/projetoAula/Data/bin/Debug/net6.0/Data.pdb
+/Users/arthurrocha/Desktop/projetoAula/Data/bin/Debug/net6.0/Domain.dll
+/Users/arthurrocha/Desktop/projetoAula/Data/bin/Debug/net6.0/Domain.pdb
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.csproj.AssemblyReference.cache
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.AssemblyInfoInputs.cache
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.AssemblyInfo.cs
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.csproj.CoreCompileInputs.cache
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.csproj.CopyComplete
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.dll
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/refint/Data.dll
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/Data.pdb
+/Users/arthurrocha/Desktop/projetoAula/Data/obj/Debug/net6.0/ref/Data.dll
